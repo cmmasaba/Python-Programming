@@ -51,3 +51,20 @@ for n in range(2, 10):
             break
     else:
         print(n, 'is a prime number')
+
+# match takes an expression and compares it to successive
+# patterns given as one or more case blocks
+# it is similar to switch-case blocks
+status = 420
+match status:
+    case 400:
+        print('Bad request')
+    case 404:
+        print('Not found')
+    case 418:
+        print("i'm a teapot")
+    case 401 | 402 | 410:  # combining several literals
+        print('Not allowed')
+    case _:  # _ is a wildcard that matches any other case
+        print("Something's wrong with the Internet")
+
